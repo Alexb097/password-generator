@@ -1,38 +1,138 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --black: #000;
+  --gradient: linear-gradient(90deg, rgb(123, 91, 199) 0%, rgb(234, 56, 141) 100%);
+  --white: #f8fafc;
+  --gray: #787d82;
+  --pink: #e6398f;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: #000;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 16px;
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  background: var(--gradient);
+  color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 50px 0px;
+}
+
+.group span {
+  width: 50%;
+  color: var(--white);
+}
+
+.group input[type="checkbox"] {
+  display: none;
+}
+
+.field {
+  width: 50%;
+}
+
+.btn-check {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.inactive {
+  background: var(--gray);
+}
+
+.counter {
+  position: relative;
+  width: 50%;
+}
+
+.counter div{
+  padding: 10px;
+  background: #e6399086;
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter button:first-child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 8px 32px;
+  height: 100%;
+  background: var(--pink);
+  color: var(--white);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.counter button:last-child {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 8px 32px;
+  height: 100%;
+  background: var(--pink);
+  color: var(--white);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-generate {
+  width: 50%;
+  padding: 10px;
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.password {
+  width: 50%;
+  height: 45px;
+  padding: 10px;
+  background: none;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  border-radius: 8px;
+  text-align: center;
 }
