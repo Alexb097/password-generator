@@ -106,7 +106,10 @@ class App extends Component {
               <span>Generate password </span>
               <span><i className='bx bxs-lock-alt'></i></span>
             </button>
-            <div className="password">{this.state.password}</div>
+            <div className="password">
+              {this.state.password}
+              <button onClick={() => navigator.clipboard.writeText(this.state.password)} className="copy-to-clipboard">Copy</button>
+            </div>
           </div>
       </div>
     );
